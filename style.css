@@ -1,0 +1,63 @@
+body {
+	background: url(assets/background.jpg) no-repeat;
+}
+
+body, h1, p{
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.top-wrapper {
+	height: 70px;
+	background: #fff;
+	text-transform: uppercase;
+}
+
+.company-name {
+	width: 300px;
+	display: inline-block;
+
+}
+
+.company-name h1 {
+	color: #c2d201;
+}
+
+.company-name p {
+	color: #999997;
+}
+
+.top-nav {
+	display: inline-block;
+}
+
+.top-nav li {
+	display: inline-block;
+}
+
+.top-nav a {
+	color: #999997;
+}
+
+.top-nav a:hover {
+	color: #c2d201;
+}
+
+.social {
+	display: inline-block;
+}
+
+.social li {
+	display: inline-block;
+}
+
+.facebook:before {
+	content: '';
+	display: inline-block;
+	background: url(assets/sprite.png) no-repeat 0 0;
+	width: 48px;
+	height: 20px;
+}
