@@ -1,0 +1,17 @@
+@font-face {
+    font-family:'Komika';
+    src:url('fonts/Komika.eot');
+    src:url('fonts/Komika.woff') format('woff'), url('fonts/Komika.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'Ubuntu';
+    src:url('fonts/Ubuntu.eot');
+    src:url('fonts/Ubuntu.woff') format('woff'), url('fonts/Ubuntu.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'Ubuntu-Bold';
+    src:url('fonts/Ubuntu-Bold.eot');
+    src:url('fonts/Ubuntu-Bold.woff') format('woff'), url('fonts/Ubuntu-Bold.ttf') format('truetype');
+}
