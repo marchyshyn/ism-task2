@@ -5,9 +5,10 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="fonts.css">
 	<link rel="stylesheet" href="style.css">
-	<script scr="script.js"></script>
+	<link rel="stylesheet" href="slider.css">
 </head>
 <body>
+<div class="header-wrapper">
 	<header>
 		<div class="top-wrapper">
 			<div>
@@ -33,28 +34,53 @@
 				</div>
 			</div>
 		</div>
-		<div class="bottom-wrapper">
-			<div class="logo">
-				<a href="#">
-					<img src="assets/logo.png" alt="Duifhuizen">
-				</a>
-			</div>
-			<div class="box-wrapper">
-				<div class="box">
-					<a href="#" class="left-cl"></a>
-					<a href="#" class="right-cl"></a>
-					<ul>
-						<li><img src="assets/pakje-1.png" alt=""></li>
-						<li><img src="assets/pakje-2.png" alt=""></li>
-						<li><img src="assets/pakje-3.png" alt=""></li>
-						<li><img src="assets/pakje-4.png" alt=""></li>
-						<li><img src="assets/pakje-5.png" alt=""></li>
-					</ul>
-				</div>
-
+	</header>
+</div>
+	
+	<div class="sea"></div>
+	<div class="main">
+		<div class="sliderSection">
+			<div class="sliderWrapper">
+			<div class="slider">
+				<div class="slider_left"></div>
+				<div class="slider_right"></div>
+				<ul class="sliderItemWrapper" data-current="0">
+					<li class="slider-item">
+							<img src="assets/pakje-1.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-2.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-3.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-4.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-5.png" alt="porsche-356" class="slider-img" />
+					</li>
+					<li class="slider-item">
+							<img src="assets/pakje-1.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-2.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-3.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-4.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-5.png" alt="porsche-356" class="slider-img" />
+					</li>
+					<li class="slider-item">
+							<img src="assets/pakje-1.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-2.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-3.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-4.png" alt="porsche-356" class="slider-img" />
+							<img src="assets/pakje-5.png" alt="porsche-356" class="slider-img" />
+					</li>
+				</ul>
 			</div>
 		</div>
-		<div class="staf">
+		</div>
+	</div>
+	<div class="logo">
+			<a href="#">
+				<img src="assets/logo.png" alt="Duifhuizen">
+			</a>
+		</div>
+	<!-- <div class="bottom-wrapper">
+			
+			
+</div> -->
+		<!-- <div class="staf">
 				<ul>
 					<li></li>
 					<li></li>
@@ -62,10 +88,9 @@
 					<li></li>
 					<li></li>
 				</ul>
-			</div>
-		<div class="tafel"><img src="assets/tafel.png" alt="tafel"></div>
-	</header>
-	<div class="main-wrapper">
+			</div> -->
+			<!-- <div class="tafel"><img src="assets/tafel.png" alt="tafel"></div> -->
+	<!-- <div class="main-wrapper">
 		<section>
 		<div class="content">
 			<h2></h2>
@@ -83,6 +108,19 @@
 			</ul>
 		</div>
 	</footer>
-	</div>
+</div> -->
+<script src="jquery-2.1.4.min.js"></script>
+<script src="slide.js"></script>
+<script src="script.js"></script>
+<script>
+		$(function () {
+			$('.slider').slide();
+		})
+	</script>
+	<script>
+	$(window).ready(function () {
+		up();
+	})
+	</script>
 </body>
 </html>
