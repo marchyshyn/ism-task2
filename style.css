@@ -4,7 +4,7 @@ body, h2, p, ul{
 }
 
 body {
-	overflow-x: hidden; 
+	overflow: hidden;
 }
 
 a {
@@ -128,6 +128,14 @@ header {
 	height: 219px;
 }
 
+.logo img:after {
+	content: '';
+	display: block;
+	width: 147px;
+	height: 25px;
+	background: url(assets/shadow4.png);
+}
+
 .main {
 	background: url(assets/background4.png) no-repeat;
 	height: 901px;
@@ -167,4 +175,115 @@ header {
 	top: 185px;
 	position: absolute;
 	z-index: -1;
+}
+
+.popup-window {/*
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 2;*/
+}
+
+.popup-bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #333;
+	opacity: .5;
+	z-index: 2;
+}
+
+.popup-content {
+	width: 550px;
+	float: right;
+	margin-right: 40px;
+}
+
+.popup {
+	background: url(assets/popup.png) no-repeat;
+	width: 751px;
+	height: 437px;
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	z-index: 2;
+}
+
+.popup h2 {
+	font-family:'Komika';
+	color: #8e367f;
+	text-align: center;
+	margin-top: 45px;
+}
+
+#popupForm li {
+	list-style-type: none; 
+	margin: 10px 0;
+}
+
+.form-input label {
+	display: inline-block;
+}
+
+.form-input {
+	display: inline-block;
+	width: 200px;
+}
+
+.form-checkbox {
+	display: inline-block;
+	width: 20px;
+}
+
+.form-items label {
+	width: 120px;
+	display: inline-block;
+	color: #4b4b43;
+	font-size: 17px;
+	font-family:'Ubuntu';
+}
+
+.checkbox-label {
+	float: right;
+	width: 350px !important;
+}
+
+.button {
+	background: linear-gradient(to top, #abca31, #c1e239);
+	font-family:'Komika';
+	color: #fff;
+	font-size: 17px;
+	width: 184px;
+	height: 45px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0 3px 0 #7a8e1d;
+}
+
+.popup-window {
+	display: none;
+}
+
+.form-wrap {
+	float: right;
+}
+
+.choose-pack {
+	position: relative;
+	bottom: -100px;
+}
+
+.choose-pack img {
+	margin: 0 !important;
+	top: -50px !important;
+}
+
+.choose-pack, .form-wrap {
+	display: inline-block;
 }

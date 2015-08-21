@@ -36,10 +36,11 @@
 				setTimeout(function() {
 					$(el).find('.sliderItemWrapper').animate({left: -currentSlide * size + '%'}, options.slideAnimate).data('current',currentSlide);
 				}, 1000);
-				
+				$('.slider_left, .slider_right').css('opacity', 0);
 				$('.main').addClass('left-main');
 				setTimeout(function () {
 					$('.main').removeClass('left-main');
+					$('.slider_left, .slider_right').css('opacity', 1);
 				}, 4000);
 				};
 

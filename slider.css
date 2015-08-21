@@ -1,6 +1,8 @@
 .sliderSection {
 	position: relative;
-	top: 325px;
+	top: 185px;
+	z-index: 2;
+	/*z-index: 2;*/
 }
 
 .sliderWrapper {
@@ -23,11 +25,15 @@
 
 .slider-item {
 	display: table-cell;
+	height: 380px;
+	vertical-align: bottom; 
 }
 
 .slider-img {
 	margin: 0 40px;
 	position: relative;
+	display: inline-block;
+	z-index: 2;
 }
 
 .box-focus {
@@ -41,12 +47,40 @@
     100% {top: -50px;}
 }
 
+.shadow-scale {
+	animation-name: shadow-scale;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes shadow-scale {
+    0% {transform: scale(1);}
+    100% {transform: scale(.9);}
+}
+
+.shadow-scale-back {
+	animation-name: shadow-scale-back;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes shadow-scale-back {
+    0% {transform: scale(.9);}
+    100% {transform: scale(1);}
+}
+
+.mess {
+	position: absolute;
+	top: -140px;
+	opacity: 0;
+}
+
 .slider_left, .slider_right {
 	width: 42px;
 	z-index: 2;
 	cursor: pointer;
 	height: 70px;
-	margin-top: 105px;
+	margin-top: 165px;
 }
 
 .slider_left {
@@ -59,4 +93,38 @@
 	background: url(assets/sprite.png) no-repeat -50px -25px;
 	position: absolute;
 	right: 0;
+}
+.slider-item div {
+	display: inline-block;
+	position: relative;
+}
+
+.slider-item div:nth-child(1) .shadow{
+	position: absolute;
+	bottom: 3px;
+	left: 39px;
+}
+
+.slider-item div:nth-child(2) .shadow{
+	position: absolute;
+	bottom: 5px;
+	left: 40px;
+}
+
+.slider-item div:nth-child(3) .shadow{
+	position: absolute;
+	bottom: 5px;
+	left: 38px;
+}
+
+.slider-item div:nth-child(4) .shadow{
+	position: absolute;
+	bottom: 4px;
+	left: 38px;
+}
+
+.slider-item div:nth-child(5) .shadow{
+	position: absolute;
+	bottom: 4px;
+	left: 39px;
 }
