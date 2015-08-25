@@ -1,8 +1,7 @@
 .sliderSection {
-	position: relative;
-	top: 185px;
+	position: absolute;
+	top: 550px;
 	z-index: 2;
-	/*z-index: 2;*/
 }
 
 .sliderWrapper {
@@ -10,7 +9,7 @@
 	overflow: hidden;
 	position: relative;
 	min-width: 320px;
-	max-width: 1134px;
+	max-width: 100%;
 }
 
 .slider {
@@ -24,9 +23,12 @@
 }
 
 .slider-item {
-	display: table-cell;
+	display: inline-block;
 	height: 380px;
 	vertical-align: bottom; 
+	float: left;
+	width: 1715px;
+	text-align: center;
 }
 
 .slider-img {
@@ -80,23 +82,24 @@
 	z-index: 2;
 	cursor: pointer;
 	height: 70px;
-	margin-top: 165px;
+	margin-top: 245px;
 }
 
 .slider_left {
 	background: url(assets/sprite.png) no-repeat 0 -25px;
 	position: absolute;
-	left: 0;	
+	left: 13%;	
 }
 
 .slider_right {
 	background: url(assets/sprite.png) no-repeat -50px -25px;
 	position: absolute;
-	right: 0;
+	right: 14%;
 }
 .slider-item div {
 	display: inline-block;
 	position: relative;
+	top: 140px;
 }
 
 .slider-item div:nth-child(1) .shadow{

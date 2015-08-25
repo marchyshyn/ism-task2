@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -140,38 +144,42 @@
 	<div class="popup-bg"></div>
 		<div class="popup">
 			<div class="popup-content">
+			<span class="close-popup"></span>
 				<h2>Pak dit pakje!</h2>
 				<div class="choose-pack"><!-- <img src="assets/pakje-5.png" alt=""> --></div>
 				<div class="form-wrap">
 					<form id="popupForm" action="#">
 				<li class="form-items">
-					<label for="">Voornaam</label>
+					<label for="firstName">Voornaam</label>
 					<div class="form-input">
-						<input type="text" id="">
+						<input type="text" id="firstName">
+						<p class="error-box"></p>
 					</div>
 				</li>
 				<li class="form-items">
-					<label for="">Achternaam</label>
+					<label for="lastName">Achternaam</label>
 					<div class="form-input">
-						<input type="text" id="">
+						<input type="text" id="lastName">
 					</div>
 				</li>
 				<li class="form-items">
-					<label for="">E-mailadres</label>
+					<label for="email">E-mailadres</label>
 					<div class="form-input">
-						<input type="text" id="">
+						<input type="text" id="email">
 					</div>
 				</li>
 				<li class="form-items">
-					<label for="" class="checkbox-label">ik wil graag de nieuwsbrief ontvangen.</label>
+					
 					<div class="form-checkbox">
-						<input type="checkbox" id="">
+						<input type="checkbox" id="ch1" class="checkbox">
+						<label for="ch1" class="checkbox-label">ik wil graag de nieuwsbrief ontvangen.</label>
 					</div>
 				</li>
 				<li class="form-items">
-					<label for="" class="checkbox-label">ja, ik ga akkoord met de <a href="#">actievoorwaarden</a>.</label>
+					
 					<div class="form-checkbox">
-						<input type="checkbox" id="">
+						<input type="checkbox" id="ch2" class="checkbox">
+						<label for="ch2" class="checkbox-label">ja, ik ga akkoord met de <a href="#">actievoorwaarden</a>.</label>
 					</div>
 				</li>
 				<button onclick="" class="button">Pak dit pakje</button>
@@ -181,6 +189,23 @@
 			</div>
 			
 		</div>
+	</div>
+	<div class="content pakje-info">
+		<h2>claim snel een pakje</h2>
+		<p>Maecenas faucibus mollis interdum. Integer <a href="#">prijzen</a> posuere erat a ante venenatis <a href="#">elke week</a> posuere velit aliquet. Vestibulum id ligula. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+		<!-- <a href="" class="button" onclick="prijzen();">BEKIJK DE PRIJZEN </a> -->
+		<button class="button" onclick="showInfo();">BEKIJK DE PRIJZEN</button>
+	</div>
+	<footer>
+		<div class="left-bt-pack"></div>
+		<div class="copyright"></div>
+		<div class="right-bt-pack"></div>
+	</footer>
+	<div class="content info">
+		<h2>Info en prijzen</h2>
+		<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa <a href="#">koffer of reistas</a> amet risus. Donec id elit non mi porta gravida at eget metus. Maecenas voucher diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod.</p>
+		<img src="assets/prijzen.png" alt="">
+		<button class="button" onclick="hideInfo();">PAK JE PAKJE!</button>
 	</div>
 <script src="jquery-2.1.4.min.js"></script>
 <script src="slide.js"></script>
@@ -193,10 +218,10 @@
 	<script>
 	$(window).ready(function () {
 		up();
-		//mess();
 		packClick();
 		closePopup();
-		messImg();
+		valid();
+		ieRadius();
 	})
 	</script>
 </body>

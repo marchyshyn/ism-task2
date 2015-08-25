@@ -37,6 +37,31 @@
 					$(el).find('.sliderItemWrapper').animate({left: -currentSlide * size + '%'}, options.slideAnimate).data('current',currentSlide);
 				}, 1000);
 				$('.slider_left, .slider_right').css('opacity', 0);
+
+				function isIE () {
+				  var myNav = navigator.userAgent.toLowerCase();
+				  var ie = (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+				  if (ie == 9) {
+				  	$('.main').animate({  textIndent: -13 }, {
+					    step: function(now,fx) {
+					      $(this).css('-ms-transform','rotate('+now+'deg)'); 
+					    },
+					    duration:'slow'
+					},'linear');
+					setTimeout(function(){
+						$('.main').animate({  textIndent: 0 }, {
+					    step: function(now,fx) {
+					      $(this).css('-ms-transform','rotate('+now+'deg)'); 
+					    },
+					    duration:'slow'
+					},'linear');
+					}, 2200);
+				  }
+				};
+				isIE();
+
+				
+
 				$('.main').addClass('left-main');
 				setTimeout(function () {
 					$('.main').removeClass('left-main');
@@ -57,10 +82,32 @@
 			   setTimeout(function() {
 					$('.sliderItemWrapper').animate({left: -currentSlide * size + '%'}, options.slideAnimate).data('current',currentSlide);
 				}, 1000);
-				
+				$('.slider_left, .slider_right').css('opacity', 0);
+				function isIE () {
+				  var myNav = navigator.userAgent.toLowerCase();
+				  var ie = (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+				  if (ie == 9) {
+				  	$('.main').animate({  textIndent: 13 }, {
+					    step: function(now,fx) {
+					      $(this).css('-ms-transform','rotate('+now+'deg)'); 
+					    },
+					    duration:'slow'
+					},'linear');
+					setTimeout(function(){
+						$('.main').animate({  textIndent: 0 }, {
+					    step: function(now,fx) {
+					      $(this).css('-ms-transform','rotate('+now+'deg)'); 
+					    },
+					    duration:'slow'
+					},'linear');
+					}, 2200);
+				  }
+				};
+				isIE();
 				$('.main').addClass('right-main');
 				setTimeout(function () {
 					$('.main').removeClass('right-main');
+					$('.slider_left, .slider_right').css('opacity', 1);
 				}, 4000);
 			   
 			}
