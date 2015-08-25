@@ -139,39 +139,50 @@ header {
 }
 
 .main {
-	background: url(assets/background7.png) no-repeat;
+	background: url(assets/background9.png) repeat-x;
 	height: 170%;
 	text-align: center;
 	position: absolute;
-	top: -35%;
+	top: -346px;
 	left: -16%;
 	width: 134%;
 }
 
 	.left-main {
 		animation-name: left-main;
-		animation-duration: 4000ms;
+		animation-duration: 5000ms;
 	}
 
 	@keyframes left-main {
 		0% {transform: rotate(0deg);}
-		50% {transform: rotate(-13deg);}
+		50% {transform: rotate(-7deg);}
 		100% {transform: rotate(0deg);}
 	}
 
 	.right-main {
 		animation-name: right-main;
-		animation-duration: 4000ms;
+		animation-duration: 5000ms;
 	}
 
 	@keyframes right-main {
 		0% {transform: rotate(0deg);}
-		50% {transform: rotate(13deg);}
+		50% {transform: rotate(7deg);}
+		100% {transform: rotate(0deg);}
+	}
+
+	.sea-rotate {
+		animation: sea-rotate 6000ms infinite linear;
+	}
+
+	@keyframes sea-rotate {
+		0% {transform: rotate(0deg);}
+		25% {transform: rotate(-5deg);}
+		50% {transform: rotate(5deg);}
 		100% {transform: rotate(0deg);}
 	}
 
 	.sea {
-		background: url(assets/sea3.png) no-repeat;
+		background: url(assets/sea3.png) repeat-x;
 		height: 976px;
 		width: 100%;
 		top: -130px;
@@ -342,7 +353,7 @@ footer {
 	left: -80px;
 	width: 438px;
 	height: 386px;
-	bottom: -5px;
+	bottom: -45px;
 }
 
 .right-bt-pack {
@@ -351,7 +362,7 @@ footer {
 	right: -104px;
 	width: 514px;
 	height: 389px;
-	bottom: -5px;
+	bottom: -45px;
 }
 
 .form-input .not_error {

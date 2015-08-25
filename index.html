@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -146,7 +142,7 @@
 			<div class="popup-content">
 			<span class="close-popup"></span>
 				<h2>Pak dit pakje!</h2>
-				<div class="choose-pack"><!-- <img src="assets/pakje-5.png" alt=""> --></div>
+				<div class="choose-pack"></div>
 				<div class="form-wrap">
 					<form id="popupForm" action="#">
 				<li class="form-items">
@@ -193,7 +189,6 @@
 	<div class="content pakje-info">
 		<h2>claim snel een pakje</h2>
 		<p>Maecenas faucibus mollis interdum. Integer <a href="#">prijzen</a> posuere erat a ante venenatis <a href="#">elke week</a> posuere velit aliquet. Vestibulum id ligula. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-		<!-- <a href="" class="button" onclick="prijzen();">BEKIJK DE PRIJZEN </a> -->
 		<button class="button" onclick="showInfo();">BEKIJK DE PRIJZEN</button>
 	</div>
 	<footer>
@@ -207,14 +202,12 @@
 		<img src="assets/prijzen.png" alt="">
 		<button class="button" onclick="hideInfo();">PAK JE PAKJE!</button>
 	</div>
+
 <script src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script> 
+<script src="jquery.easing.compatibility.js"></script>
 <script src="slide.js"></script>
 <script src="script.js"></script>
-<script>
-		// $(function () {
-		// 	$('.slider').slide();
-		// })
-	</script>
 	<script>
 	$(window).ready(function () {
 		$('.slider').slide();

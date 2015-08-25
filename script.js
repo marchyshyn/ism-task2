@@ -1,14 +1,14 @@
 function up () {
 	$(document).on({
 		mouseenter: function() {
-			$(this).stop().animate({top: '-50px'}, 300, function(){
+			$(this).stop().animate({top: '-50px'}, 600, 'easeOutBounce', function(){
 				$('.mess', $(this).parent()).animate({opacity: 1}, 100);
 			});
 			$('.shadow', $(this).parent()).removeClass('shadow-scale-back');
 			$('.shadow', $(this).parent()).addClass('shadow-scale');				
 		},
 		mouseleave: function() {
-			$(this).stop().animate({top: '0px'}, 300);
+			$(this).stop().animate({top: '0px'}, 600, 'easeOutBounce');
 			$('.mess', $(this).parent()).animate({opacity: 0}, 300);
 			$('.shadow', $(this).parent()).addClass('shadow-scale-back');
 			$('.shadow', $(this).parent()).removeClass('shadow-scale');
@@ -47,7 +47,7 @@ function showInfo () {
 function hideInfo () {
 	$('.info').animate({opacity: 0}, 300, function() {
 		$('.info').css('display', 'none');
-		$('.main').animate({top: '-35%'}, 300);
+		$('.main').animate({top: '-38%'}, 300);
 		setTimeout(function(){
 			$('.logo').css('display', 'block');
 		}, 300);
@@ -55,12 +55,6 @@ function hideInfo () {
 	$('.pakje-info').animate({opacity: 1}, 400);
 	});
 		
-};
-
-var jVal = {
-	'fullName': function() {
-
-	}
 };
 
 function valid () {
@@ -116,3 +110,15 @@ function ieRadius () {
 		$('.button').css({'background': 'url(assets/button.png)'});
 	}
 };
+
+
+
+$(document).ready(function() {   
+  function sea() {
+  	$('.sea').addClass('sea-rotate');
+    $('.sea').animate({'top': '-90px'}, 1500, 'easeInOutBack', function(){
+    	$('.sea').animate({'top': '-130px'}, 1500, 'easeInOutBack', sea);
+    });
+  }
+  sea();
+}); 
