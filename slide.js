@@ -11,11 +11,18 @@
 
 			var el = this,
 			size = 100,
+			sizeLeft = 167,
 			lengthSlides = $(this).find('.slider-item').length,
-			widthSlides = (lengthSlides + 2) * 100 + '%';
+			widthSlides = (lengthSlides + 2) * size + '%';
 			$(this).find('.sliderItemWrapper').width(widthSlides);
-			//$(this).find('.sliderItemWrapper').width(size * lengthSlides + '%');
+			//$(this).find('.slider-item').width( size / lengthSlides + '%');
 			$(this).find('.slider-item').width( size / lengthSlides + '%');
+			//$(this).find('.slider-item').width($('body').width());
+			// $('.sliderSection').width($('body').width());
+			$(window).resize(function() {
+				$('.sliderSection').width($('body').width());
+			});
+			
 			$('.slider_left').click(function() {
 				//clearInterval(options.showTime);
 		       prevSlide();
@@ -31,7 +38,8 @@
 				currentSlide++;
 				if ( currentSlide >= lengthSlides ){
 
-				$(el).find('.sliderItemWrapper').css('left', -(currentSlide-2) * size + '%');
+				// $(el).find('.sliderItemWrapper').css('left', -(currentSlide-2) * 100 + '%');
+				$(el).find('.sliderItemWrapper').css('left', -167.4 + '%');
 				$('.sliderItemWrapper').append($('.sliderItemWrapper').children().first().clone());
 				$('.sliderItemWrapper').children().first().remove();
 					currentSlide--;
@@ -39,7 +47,7 @@
 				}
 				setTimeout(function() {
 					
-					$(el).find('.sliderItemWrapper').animate({left: -currentSlide * size + '%'}, options.slideAnimate, 'easeOutQuint').data('current',currentSlide);
+					$(el).find('.sliderItemWrapper').animate({left: -currentSlide * sizeLeft + '%'}, options.slideAnimate, 'easeOutQuint').data('current',currentSlide);
 				}, options.startAnimate);
 				$('.slider_left, .slider_right').css('display', 'none');
 				function isIE () {
@@ -78,7 +86,7 @@
 			   currentSlide--;
 			   if(currentSlide<0)
 			   {
-			       $('.sliderItemWrapper').css('left',-(currentSlide+2) * size + '%');  
+			       $('.sliderItemWrapper').css('left',-166.7 + '%');  
 			       $('.sliderItemWrapper').prepend($('.sliderItemWrapper').children().last().clone()); 
 			       $('.sliderItemWrapper').children().last().remove();
 			       currentSlide++;   

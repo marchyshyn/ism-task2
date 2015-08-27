@@ -1,11 +1,13 @@
 .sliderSection {
-	position: absolute;
+	/*position: absolute;*/
+	position: relative;
+	margin: 0 auto;
 	top: 550px;
 	z-index: 2;
 }
 
 .sliderWrapper {
-	margin: 20px auto;
+	/*margin: 20px auto;*/
 	overflow: hidden;
 	position: relative;
 	min-width: 320px;
@@ -82,7 +84,7 @@
 	z-index: 2;
 	cursor: pointer;
 	height: 70px;
-	margin-top: 245px;
+	/*margin-top: 245px;*/
 }
 
 .slider_left {
@@ -130,4 +132,10 @@
 	position: absolute;
 	bottom: 4px;
 	left: 39px;
+}
+
+.item-wrap {
+	top: 0 !important;
+    position: relative !important;
+    left: -21%;
 }

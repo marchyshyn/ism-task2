@@ -114,11 +114,11 @@ function ieRadius () {
 
 
 $(document).ready(function() {   
-  function sea() {
-  	$('.sea').addClass('sea-rotate');
-    $('.sea').animate({'top': '-90px'}, 1500, 'easeInOutBack', function(){
-    	$('.sea').animate({'top': '-130px'}, 1500, 'easeInOutBack', sea);
-    });
-  }
-  sea();
+  // function sea() {
+  // 	$('.sea').addClass('sea-rotate');
+  //   $('.sea').animate({'top': '-90px'}, 1500, 'easeInOutBack', function(){
+  //   	$('.sea').animate({'top': '-130px'}, 1500, 'easeInOutBack', sea);
+  //   });
+  // }
+  // sea();
 }); 
